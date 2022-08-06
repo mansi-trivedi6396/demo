@@ -28,8 +28,9 @@ export default function index() {
   return (
     <>
     <Appbar/>
-    <Footer/>
+    
     <Home/>
+    <Footer/>
     </>
   )
 }
