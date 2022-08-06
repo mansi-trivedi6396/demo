@@ -22,9 +22,15 @@
 // }
 import React from 'react'
 import Appbar from "./Admin/Component/Appbar"
+import Footer from './Admin/Component/Footer'
 export default function index() {
   return (
+    <>
     <Appbar/>
+    <Footer/>
+  
+    </>
   )
 }
+
 
