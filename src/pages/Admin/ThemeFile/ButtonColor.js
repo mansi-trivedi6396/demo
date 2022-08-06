@@ -1,1 +1,1 @@
-export default '#45C165';
+// export const ButtonColor='#45C165'

@@ -1,11 +1,11 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core'
-import ButtonColor from '../ThemeFile/ButtonColor';
+//import { ButtonColor } from '../ThemeFile/ButtonColor';
 
 const useStyles = makeStyles((theme) => ({
     customButton: {
-        background: `${ButtonColor}`,
+        background: `#45C165`,
         border: 0,
         borderRadius: 5,
         fontFamily: 'DM Sans',
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "0 10px",
         textTransform: 'none',
         "&:hover":{
-            background: `${ButtonColor}`,
+            background: `#45C165`,
         }
     },
 }))
