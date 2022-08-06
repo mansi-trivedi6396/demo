@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core'
-import { ButtonColor } from '../ThemeFile/ButtonColor';
+import ButtonColor from '../ThemeFile/ButtonColor';
 
 const useStyles = makeStyles((theme) => ({
     customButton: {
