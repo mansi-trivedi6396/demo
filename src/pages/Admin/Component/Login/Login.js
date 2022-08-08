@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useRef, useState } from "react";
 import AppBarNew from '../Appbar'
 import Footer from '../Footer'
 import LoginDialog from './LoginDialog'
@@ -34,7 +35,27 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
+
 export default function Login() {
+    function useComponentVisible(initialIsVisible) {
+        const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
+        const ref = useRef(null);
+    
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setIsComponentVisible(false);
+            }
+        };
+    
+        useEffect(() => {
+            document.addEventListener('click', handleClickOutside, true);
+            return () => {
+                document.removeEventListener('click', handleClickOutside, true);
+            };
+        }, []);
+    
+        return { ref, isComponentVisible, setIsComponentVisible };
+    }
      const { ref, isComponentVisible } = useComponentVisible(true);
     const classes = useStyles();
     return (
