@@ -12,16 +12,16 @@ import React from "react"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import CustomToogle from "./CustomToogle"
 import clsx from "clsx"
-const CustomExpandMore = withStyles(iconStyles)(
-  ({ className, classes, ...rest }) => {
-    return (
-      <ExpandMoreIcon
-        {...rest}
-        className={clsx(className, classes.selectIcon)}
-      />
-    )
-  }
-)
+// const CustomExpandMore = withStyles(iconStyles)(
+//   ({ className, classes, ...rest }) => {
+//     return (
+//       <ExpandMoreIcon
+//         {...rest}
+//         className={clsx(className, classes.selectIcon)}
+//       />
+//     )
+//   }
+// )
 
 
 const useStyle = makeStyles(theme => ({
@@ -102,7 +102,7 @@ function AccordionItems({ label, isChecked }) {
                 id="demo-simple-select"
                 value={preTime}
                 displayEmpty
-                IconComponent={CustomExpandMore}
+                // IconComponent={CustomExpandMore}
                 label="Age"
                 onChange={handleChange}
                 disableUnderline
@@ -126,7 +126,7 @@ function AccordionItems({ label, isChecked }) {
                 id="demo-simple-select"
                 value={postTime}
                 displayEmpty
-                IconComponent={CustomExpandMore}
+                // IconComponent={CustomExpandMore}
                 label="Age"
                 onChange={handleTeChange}
                 disableUnderline
