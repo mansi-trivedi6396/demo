@@ -40,7 +40,8 @@ export default function Login() {
     return (
         <div>
             <AppBarNew />
-            <Box className={classes.bgImage} maxWidth='lg'  >
+            <Box className={classes.bgImage}  >
+            {/* maxWidth='lg'  */}
                 <div className={classes.dialog_like}>
                     <LoginDialog />
                 </div>
