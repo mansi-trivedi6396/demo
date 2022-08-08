@@ -4,7 +4,7 @@ import Footer from '../Footer'
 import LoginDialog from './LoginDialog'
 import bg from '../../../../images/background.jpg'
 import { makeStyles } from '@material-ui/core/styles'
-//import useComponentVisible from '../useComponentVisible'
+import useComponentVisible from '../useComponentVisible'
 import { Box } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Login() {
-    // const { ref, isComponentVisible } = useComponentVisible(true);
+     const { ref, isComponentVisible } = useComponentVisible(true);
     const classes = useStyles();
     return (
         <div>
