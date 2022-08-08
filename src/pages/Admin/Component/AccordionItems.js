@@ -12,6 +12,17 @@ import React from "react"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import CustomToogle from "./CustomToogle"
 import clsx from "clsx"
+const CustomExpandMore = withStyles(iconStyles)(
+  ({ className, classes, ...rest }) => {
+    return (
+      <ExpandMoreIcon
+        {...rest}
+        className={clsx(className, classes.selectIcon)}
+      />
+    )
+  }
+)
+
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -58,16 +69,6 @@ const useStyle = makeStyles(theme => ({
   }
 }))
 
-const CustomExpandMore = withStyles(iconStyles)(
-  ({ className, classes, ...rest }) => {
-    return (
-      <ExpandMoreIcon
-        {...rest}
-        className={clsx(className, classes.selectIcon)}
-      />
-    )
-  }
-)
 
 const iconStyles = {
   selectIcon: {
