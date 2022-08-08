@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import loginLogo from '../../../../images/login_logo.svg'
 import CustomTextField from '../CustomTextField';
 import { Link as NavLink } from 'gatsby';
-import { ButtonColor } from '../../ThemeFile/ButtonColor';
+//import { ButtonColor } from '../../ThemeFile/ButtonColor';
 function LoginDialog() {
     const [open, setOpen] = useState(false);
     const handleClose = () => {
@@ -64,20 +64,20 @@ function LoginDialog() {
             padding: '15px'
         },
         loginBtn: {
-            background: `${ButtonColor}`,
+           backgroundColor: "#45C165",
             color: '#0A3133',
             marginTop: '30px',
             width: '100%',
             textTransform: 'none',
             borderRadius: '2px',
             "&:hover":{
-                background: `${ButtonColor}`,
+               backgroundColor: "#45C165",
             }
 
 
         },
         createAccBtn: {
-            background: `${ButtonColor}`,
+           backgroundColor: "#45C165",
             color: '#FFFFFF',
             marginTop: '10px',
             width: '100%',
@@ -85,7 +85,7 @@ function LoginDialog() {
             fontFamily: 'DM Sans',
             fontWeight: 'bold',
             "&:hover":{
-                background: `${ButtonColor}`,
+               backgroundColor: "#45C165",
             }
         },
         gridForm: {

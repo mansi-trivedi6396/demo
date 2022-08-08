@@ -62,24 +62,24 @@ function LoginModal() {
             padding: '15px'
         },
         loginBtn: {
-            background: `${ButtonColor}`,
+            backgroundColor: "#45C165",
             color: 'white',
             marginTop: '30px',
             width: '100%',
             textTransform: 'none',
             borderRadius: '2px',
             "&:hover":{
-                background: `${ButtonColor}`,
+                backgroundColor: "#45C165",
             }
         },
         createAccBtn: {
-            background: `${ButtonColor}`,
+            backgroundColor: "#45C165",
             color: 'white',
             marginTop: '10px',
             width: '100%',
             textTransform: 'none',
             "&:hover":{
-                background: `${ButtonColor}`,
+                backgroundColor: "#45C165",
             }
         },
         bottomSignup: {
