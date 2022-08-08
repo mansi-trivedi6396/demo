@@ -47,7 +47,7 @@ function SelectWithIcon({ placeHolder, data, label }) {
             <Select
 
                 placeholder={placeHolder}
-                value={data[0]}
+              //  value={data[0]}
                 options={data}
                 className={classes.root}
                 isSearchable={false}
