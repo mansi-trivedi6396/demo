@@ -209,12 +209,12 @@ function StapperMain() {
   const classes = useStyles()
   const [activeStep, setActiveStep] = useState(1)
 
-  const [stepContent,setStepContent] = useState(false)
+ 
   const steps = getSteps()
   const isFirst = activeStep === 0
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
-    setStepContent(!stepContent)
+
   }
 
   const handleBack = () => {
@@ -296,7 +296,7 @@ function StapperMain() {
                   </Button>
                  
                 )}
-                 {stepContent?<><AddClubForm/></>:""}
+                
               </div>
             </div>
           )}
