@@ -58,13 +58,13 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "15px",
   },
   CreateButton: {
-    background: `${ButtonColor} !important`,
+    backgroundColor: "#45C165",
   
     color: "white !important",
     textTransform: "capitalize !important",
     borderRadius: "10px !important",
     "&:hover": {
-      background: `${ButtonColor} !important`,
+      backgroundColor: "#45C165",
     },
   },
   Header: {

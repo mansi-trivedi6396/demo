@@ -89,7 +89,7 @@ function CourtSetting() {
       
       <TableContainer style={{marginTop:"5%"}}  >
       <Link href="#" underline="always" ><span style={{color:"#B4B4BC",fontSize:"15px"}}>Setting</span></Link>
-      <Button style={{backgroundColor:`${ButtonColor}`,display:'flex',marginLeft:"90%",color:"white",width:"188px",marginLeft:"82%",borderRadius:"12px 12px"}}>
+      <Button style={{backgroundColor: "#45C165",display:'flex',marginLeft:"90%",color:"white",width:"188px",marginLeft:"82%",borderRadius:"12px 12px"}}>
         <img src={btnimg} style={{color:"white",height:"9px"}}/><span style={{marginLeft:"3%",textTransform:"initial"}}
          onClick={() => {
           setDrawerOptions({ open: true, content: "NewCourt" })
