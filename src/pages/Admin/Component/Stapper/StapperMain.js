@@ -158,7 +158,7 @@ const useStyle = makeStyles(theme => ({
 function _renderStepContent(step) {
   switch (step) {
     case 0:
-      return <AddClubForm />
+      return {...AddClubForm}
   //   case 1:
   //     return <AddClubForm />
   //   case 2:
