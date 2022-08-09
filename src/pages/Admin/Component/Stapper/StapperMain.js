@@ -11,8 +11,8 @@ import {
 } from "@material-ui/core"
 import React, { Fragment, useState } from "react"
 import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
-// import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
-// import BillingForm from "../Drawer/Screen/Forms/BillingForm"
+ import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
+ import BillingForm from "../Drawer/Screen/Forms/BillingForm"
 
 import clsx from "clsx"
 import PropTypes from "prop-types"
@@ -158,18 +158,18 @@ const useStyle = makeStyles(theme => ({
 
 
 
-// function _renderStepContent(step) {
-//   switch (step) {
-//     case 0:
-//       return <AddClubForm />
-//     case 1:
-//       return <AddClubForm />
-//     // case 2:
-//     //   return <AddCourtForm />
-//     // case 3:
-//     //   return <BillingForm />
-//   }
-// }
+function _renderStepContent(step) {
+  switch (step) {
+    case 0:
+      return <AddClubForm />
+    case 1:
+      return <AddClubForm />
+    case 2:
+      return <AddCourtForm />
+    case 3:
+      return <BillingForm />
+  }
+}
 
 function getSteps() {
   return ["Select campaign settings", "Create an ad group", "Create an ad"]
@@ -258,7 +258,7 @@ function StapperMain() {
             <div>
               <Typography className={classes.instructions}>
                 {" "}
-                {/* {_renderStepContent(activeStep)} */}
+                {_renderStepContent(activeStep)}
               </Typography>
               <div className={classesforStpper.buttonRoot}>
                 <Button
