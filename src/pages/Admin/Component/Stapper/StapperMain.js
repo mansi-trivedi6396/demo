@@ -10,7 +10,7 @@ import {
   withStyles,
 } from "@material-ui/core"
 import React, { Fragment, useState } from "react"
-//import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
+import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
 //import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
 //import BillingForm from "../Drawer/Screen/Forms/BillingForm"
 
@@ -156,16 +156,16 @@ const useStyle = makeStyles(theme => ({
 }))
 
 function _renderStepContent(step) {
-  // switch (step) {
-  //   case 0:
-  //     return <AddClubForm />
+  switch (step) {
+    case 0:
+      return <AddClubForm />
   //   case 1:
   //     return <AddClubForm />
   //   case 2:
   //     return <AddCourtForm />
   //   case 3:
   //     return <BillingForm />
-  // }
+  }
 }
 
 function getSteps() {
