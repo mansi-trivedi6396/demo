@@ -13,7 +13,7 @@ import React, { Fragment, useState } from "react"
 //import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
 //import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
 //import BillingForm from "../Drawer/Screen/Forms/BillingForm"
-import useStyles from "./styles"
+
 import clsx from "clsx"
 import PropTypes from "prop-types"
 import activeLine from "../../../../images/active_line.svg"
@@ -23,6 +23,31 @@ import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline"
 import DrawerSide from "../Drawer/DrawerSide"
 import { Link as GatsByLink } from "gatsby"
 import { ButtonColor } from "../../ThemeFile/ButtonColor"
+
+const useStyles = makeStyles((theme) => ({
+  stepper: {
+    padding: theme.spacing(3, 0, 5)
+  },
+  buttons: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    background: '#209CA2'
+  },
+  button: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(1),
+    backgroundColor: '#B7B7BF'
+  },
+  wrapper: {
+    margin: theme.spacing(1),
+    position: 'absolute'
+  },
+  buttonProgress: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  }
+}))
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -176,6 +201,7 @@ QontoStepIcon.propTypes = {
 }
 
 function StapperMain() {
+  
   //const steps = ['Shipping address', 'Payment details', 'Review your order'];
   const classes = useStyles()
   const [activeStep, setActiveStep] = useState(1)
