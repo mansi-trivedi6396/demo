@@ -155,18 +155,21 @@ const useStyle = makeStyles(theme => ({
   }
 }))
 
-function _renderStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddClubForm />
-    case 1:
-      return <AddClubForm />
-    // case 2:
-    //   return <AddCourtForm />
-    // case 3:
-    //   return <BillingForm />
-  }
-}
+
+
+
+// function _renderStepContent(step) {
+//   switch (step) {
+//     case 0:
+//       return <AddClubForm />
+//     case 1:
+//       return <AddClubForm />
+//     // case 2:
+//     //   return <AddCourtForm />
+//     // case 3:
+//     //   return <BillingForm />
+//   }
+// }
 
 function getSteps() {
   return ["Select campaign settings", "Create an ad group", "Create an ad"]
@@ -206,10 +209,12 @@ function StapperMain() {
   const classes = useStyles()
   const [activeStep, setActiveStep] = useState(1)
 
+  const [stepContent,setStepContent] = useState(false)
   const steps = getSteps()
   const isFirst = activeStep === 0
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
+    setStepContent(!stepContent)
   }
 
   const handleBack = () => {
@@ -253,7 +258,7 @@ function StapperMain() {
             <div>
               <Typography className={classes.instructions}>
                 {" "}
-                {_renderStepContent(activeStep)}
+                {/* {_renderStepContent(activeStep)} */}
               </Typography>
               <div className={classesforStpper.buttonRoot}>
                 <Button
@@ -289,7 +294,9 @@ function StapperMain() {
                   >
                     Next
                   </Button>
+                 
                 )}
+                 {stepContent?<><AddClubForm/></>:""}
               </div>
             </div>
           )}
