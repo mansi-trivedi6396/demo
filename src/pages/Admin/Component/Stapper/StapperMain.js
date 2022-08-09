@@ -160,18 +160,7 @@ const useStyle = makeStyles(theme => ({
 
 
 
-function _renderStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddClubForm />
-    case 1:
-      return <AddClubForm />
-    case 2:
-      return <AddCourtForm />
-    case 3:
-      return <BillingForm />
-  }
-}
+
 
 function getSteps() {
   return ["Select campaign settings", "Create an ad group", "Create an ad"]
@@ -227,6 +216,18 @@ function StapperMain() {
     setActiveStep(0)
   }
   const classesforStpper = useStyle()
+  function _renderStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddClubForm />
+      case 1:
+        return <AddClubForm />
+      case 2:
+        return <AddCourtForm />
+      case 3:
+        return <BillingForm />
+    }
+  }
   return (
     <DrawerSide>
       <div className={classesforStpper.rootMain}>
