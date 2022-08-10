@@ -217,7 +217,7 @@ function StapperMain() {
   const handleReset = () => {
     setActiveStep(0)
   }
-  function _renderStepContent(step) {
+  const _renderStepContent = (step) =>{
     switch (step) {
       case 0:
         return <AddClubForm />
