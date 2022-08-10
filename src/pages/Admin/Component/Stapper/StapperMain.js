@@ -205,10 +205,8 @@ function StapperMain() {
       case 0:
         return <AddClubForm />
       case 1:
-        return <AddClubForm />
-      case 2:
         return <AddCourtForm />
-      case 3:
+      case 2:
         return <BillingForm />
     }
   }
