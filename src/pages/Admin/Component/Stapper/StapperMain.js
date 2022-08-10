@@ -193,19 +193,20 @@ QontoStepIcon.propTypes = {
 
   isActive: PropTypes.bool,
 }
-function _renderStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddClubForm />
-    case 1:
-      return <AddClubForm />
-    case 2:
-      return <AddCourtForm />
-    case 3:
-      return <BillingForm />
-  }
-}
+
 function StapperMain() {
+  function _renderStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddClubForm />
+      case 1:
+        return <AddClubForm />
+      case 2:
+        return <AddCourtForm />
+      case 3:
+        return <BillingForm />
+    }
+  }
   
   //const steps = ['Shipping address', 'Payment details', 'Review your order'];
   const classes = useStyles()
