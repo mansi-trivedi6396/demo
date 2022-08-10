@@ -195,6 +195,13 @@ QontoStepIcon.propTypes = {
 }
 
 function StapperMain() {
+  
+  //const steps = ['Shipping address', 'Payment details', 'Review your order'];
+  const classes = useStyles()
+  const [activeStep, setActiveStep] = useState(1)
+
+ 
+  const steps = getSteps()
   function _renderStepContent(step) {
     switch (step) {
       case 0:
@@ -208,12 +215,6 @@ function StapperMain() {
     }
   }
   
-  //const steps = ['Shipping address', 'Payment details', 'Review your order'];
-  const classes = useStyles()
-  const [activeStep, setActiveStep] = useState(1)
-
- 
-  const steps = getSteps()
   const isFirst = activeStep === 0
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
