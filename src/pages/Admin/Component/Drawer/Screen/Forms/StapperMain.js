@@ -10,34 +10,21 @@ import {
   withStyles,
 } from "@material-ui/core"
 import React, { Fragment, useState } from "react"
-
-
-
+import AddClubForm from "./AddClubForm"
+import AddCourtForm from "./AddCourtForm"
+import BillingForm from "./BillingForm"
 import clsx from "clsx"
 import PropTypes from "prop-types"
-import activeLine from "../../../../images/active_line.svg"
-import disableLine from "../../../../images/dis_line.svg"
+import activeLine from "../../../../../../images/active_line.svg"
+import disableLine from "../../../../../../images/dis_line.svg"
 import { Formik, Form } from "formik"
 import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline"
-import DrawerSide from "../Drawer/DrawerSide"
+import DrawerSide from "../../DrawerSide"
 import { Link as GatsByLink } from "gatsby"
-import { ButtonColor } from "../../ThemeFile/ButtonColor"
-import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
-import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
-import BillingForm from "../Drawer/Screen/Forms/BillingForm"
+import { ButtonColor } from "../../../../ThemeFile/ButtonColor"
 
-const _renderStepContent = (step) =>{
-  switch (step) {
-    case 0:
-      return <AddClubForm />
-    case 1:
-      return <AddClubForm />
-    case 0:
-      return <AddCourtForm />
-    case 1:
-      return <BillingForm />
-  }
-}
+
+
 
 const useStyles = makeStyles((theme) => ({
   stepper: {
@@ -215,7 +202,18 @@ function StapperMain() {
 
  
   const steps = getSteps()
-  
+  const _renderStepContent = (step) =>{
+    switch (step) {
+      case 0:
+        return <AddClubForm />
+      case 1:
+        return <AddClubForm />
+      case 2:
+        return <AddCourtForm />
+      case 3:
+        return <BillingForm />
+    }
+  }
   
   const isFirst = activeStep === 0
   const handleNext = () => {
@@ -265,7 +263,7 @@ function StapperMain() {
           ) : (
             <div>
               <Typography className={classes.instructions}>
-                {" "}
+                {/* {" "} */}
                 {_renderStepContent(activeStep)}
               </Typography>
               <div className={classesforStpper.buttonRoot}>
