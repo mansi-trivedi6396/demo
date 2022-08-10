@@ -26,6 +26,19 @@ import AddClubForm from "../Drawer/Screen/Forms/AddClubForm"
 import AddCourtForm from "../Drawer/Screen/Forms/AddCourtForm"
 import BillingForm from "../Drawer/Screen/Forms/BillingForm"
 
+const _renderStepContent = (step) =>{
+  switch (step) {
+    case 0:
+      return <AddClubForm />
+    case 1:
+      return <AddClubForm />
+    case 0:
+      return <AddCourtForm />
+    case 1:
+      return <BillingForm />
+  }
+}
+
 const useStyles = makeStyles((theme) => ({
   stepper: {
     padding: theme.spacing(3, 0, 5)
@@ -217,18 +230,7 @@ function StapperMain() {
   const handleReset = () => {
     setActiveStep(0)
   }
-  const _renderStepContent = (step) =>{
-    // switch (step) {
-    //   // case 0:
-    //   //   return <AddClubForm />
-    //   // case 1:
-    //   //   return <AddClubForm />
-    //   case 0:
-    //     return <AddCourtForm />
-    //   case 1:
-    //     return <BillingForm />
-    // }
-  }
+ 
   const classesforStpper = useStyle()
   
   return (
