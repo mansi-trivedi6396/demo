@@ -200,7 +200,18 @@ function StapperMain() {
   const classes = useStyles()
   const [activeStep, setActiveStep] = useState(1)
 
- 
+  const _renderStepContent = (step) =>{
+    switch (step) {
+      case 0:
+        return <AddClubForm />
+      case 1:
+        return <AddClubForm />
+      case 2:
+        return <AddCourtForm />
+      case 3:
+        return <BillingForm />
+    }
+  }
   const steps = getSteps()
   
   
@@ -217,18 +228,7 @@ function StapperMain() {
   const handleReset = () => {
     setActiveStep(0)
   }
-  const _renderStepContent = (step) =>{
-    switch (step) {
-      case 0:
-        return <AddClubForm />
-      case 1:
-        return <AddClubForm />
-      case 2:
-        return <AddCourtForm />
-      case 3:
-        return <BillingForm />
-    }
-  }
+ 
   const classesforStpper = useStyle()
   
   return (
@@ -265,7 +265,9 @@ function StapperMain() {
               <Typography className={classes.instructions}>
                 {" "}
                 {_renderStepContent(activeStep)}
+                
               </Typography>
+              
               <div className={classesforStpper.buttonRoot}>
                 <Button
                   disableRipple
