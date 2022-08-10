@@ -203,16 +203,16 @@ function StapperMain() {
  
   const steps = getSteps()
   const _renderStepContent = (step) =>{
-    switch (step) {
-      case 0:
-        return <AddClubForm />
-      case 1:
-        return <AddClubForm />
-      case 2:
-        return <AddCourtForm />
-      case 3:
-        return <BillingForm />
-    }
+    // switch (step) {
+    //   case 0:
+    //     return <AddClubForm />
+    //   case 1:
+    //     return <AddClubForm />
+    //   case 2:
+    //     return <AddCourtForm />
+    //   case 3:
+    //     return <BillingForm />
+    // }
   }
   
   const isFirst = activeStep === 0
