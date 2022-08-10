@@ -202,18 +202,7 @@ function StapperMain() {
 
  
   const steps = getSteps()
-  function _renderStepContent(step) {
-    switch (step) {
-      case 0:
-        return <AddClubForm />
-      case 1:
-        return <AddClubForm />
-      case 2:
-        return <AddCourtForm />
-      case 3:
-        return <BillingForm />
-    }
-  }
+  
   
   const isFirst = activeStep === 0
   const handleNext = () => {
@@ -227,6 +216,18 @@ function StapperMain() {
 
   const handleReset = () => {
     setActiveStep(0)
+  }
+  function _renderStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddClubForm />
+      case 1:
+        return <AddClubForm />
+      case 2:
+        return <AddCourtForm />
+      case 3:
+        return <BillingForm />
+    }
   }
   const classesforStpper = useStyle()
   
