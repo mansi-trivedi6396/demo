@@ -4,21 +4,21 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-//  module.exports = {
-//   /* Your site config here */
-//   plugins: [],
-// }
-module.exports = {
+ module.exports = {
   /* Your site config here */
-  plugins: [
-    `gatsby-plugin-offline`,
-    `gatsby-theme-material-ui`,
-    `gatsby-plugin-material-ui`,
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/pages`,
-      },
-    },
-  ],
+  plugins: [],
 }
+// module.exports = {
+//   /* Your site config here */
+//   plugins: [
+//     `gatsby-plugin-offline`,
+//     `gatsby-theme-material-ui`,
+//     `gatsby-plugin-material-ui`,
+//     {
+//       resolve: `gatsby-plugin-page-creator`,
+//       options: {
+//         path: `${__dirname}/src/pages`,
+//       },
+//     },
+//   ],
+// }
